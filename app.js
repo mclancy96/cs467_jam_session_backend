@@ -21,6 +21,9 @@ app.use(express.static(__dirname + "/public")); // If we have anything that need
  * All Routes
  */
 
+app.get("/", (req, res) => {
+  res.status(200).send("Connection Good");
+})
 app.use(jam_session_routes);
 app.use(message_routes);
 app.use(review_routes);
